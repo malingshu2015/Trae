@@ -1,0 +1,10 @@
+/.env
+/file01
+/index.html
+/node_modules
+/package-lock.json
+/package.json
+/public
+/server
+/src
+/vite.config.js

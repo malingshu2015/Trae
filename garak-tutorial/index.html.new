@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garak安全测试框架 - 从入门到精通</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="logo-container">
+        <i class="fas fa-shield-alt"></i>
+        <h1>Garak安全测试框架</h1>
+      </div>
+      <p>从入门到精通的学习指南</p>
+    </header>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#intro" class="active"><i class="fas fa-home"></i> 简介</a></li>
+        <li><a href="#basics"><i class="fas fa-book"></i> 基础概念</a></li>
+        <li><a href="#installation"><i class="fas fa-download"></i> 安装配置</a></li>
+        <li><a href="#usage"><i class="fas fa-code"></i> 使用方法</a></li>
+        <li><a href="#advanced"><i class="fas fa-graduation-cap"></i> 高级技巧</a></li>
+        <li><a href="#cases"><i class="fas fa-flask"></i> 实战案例</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="intro" class="content-section active">
+        <div class="section-header">
+          <h2><i class="fas fa-home"></i> Garak简介</h2>
+          <div class="difficulty-badge beginner">入门级</div>
+          <div class="time-estimate"><i class="far fa-clock"></i> 5分钟</div>
+        </div>
+        
+        <div class="content-card">
+          <h3>什么是Garak?</h3>
+          <p>Garak是一个专为大型语言模型(LLM)设计的安全测试框架，它能帮助开发者和研究人员评估AI模型的安全性和鲁棒性。通过Garak，你可以：</p>
+          <ul>
+            <li>检测模型的漏洞和弱点</li>
+            <li>测试模型对抗各种攻击的防御能力</li>
+            <li>评估模型对有害内容的响应</li>
+            <li>生成全面的安全报告</li>
+          </ul>
+          
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="info-content">
+              <p>Garak的名字来源于《星际迷航：深空九号》中的角色Elim Garak，一个前间谍和谜一样的人物，这个名字暗示了该工具在安全测试中的深度和复杂性。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-card">
+          <h3>为什么需要Garak?</h3>
+          <p>随着大型语言模型在各行各业的广泛应用，确保这些模型的安全性变得至关重要。Garak提供了一套全面的工具，帮助你：</p>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <i class="fas fa-search"></i>
+              <h4>发现漏洞</h4>
+              <p>在部署前识别模型中的潜在安全问题</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-shield-alt"></i>
+              <h4>增强防御</h4>
+              <p>通过了解弱点来改进模型的安全措施</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-chart-line"></i>
+              <h4>量化风险</h4>
+              <p>获得可量化的安全指标和评分</p>
+            </div>
+            <div class="benefit-item">
+              <i class="fas fa-check-circle"></i>
+              <h4>合规保障</h4>
+              <p>确保AI系统符合安全标准和法规</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-card interactive-card">
+          <h3>学习路线图</h3>
+          <div class="roadmap">
+            <div class="roadmap-item active" data-section="intro">
+              <div class="roadmap-icon"><i class="fas fa-flag-checkered"></i></div>
+              <div class="roadmap-content">
+                <h4>简介</h4>
+                <p>了解Garak的基本概念</p>
+              </div>
+            </div>
+            <div class="roadmap-item" data-section="basics">
+              <div class="roadmap-icon"><i class="fas fa-book"></i></div>
+              <div class="roadmap-content">
+                <h4>基础概念</h4>
+                <p>掌握核心术语和框架结构</p>
+              </div>
+            </div>
+            <div class="roadmap-item" data-section="installation">
+              <div class="roadmap-icon"><i class="fas fa-download"></i></div>
+              <div class="roadmap-content">
+                <h4>安装配置</h4>
+                <p>设置开发环境</p>
+              </div>
+            </div>
+            <div class="roadmap-item" data-section="usage">
+              <div class="roadmap-icon"><i class="fas fa-code"></i></div>
+              <div class="roadmap-content">
+                <h4>使用方法</h4>
+                <p>学习基本操作和命令</p>
+              </div>
+            </div>
+            <div class="roadmap-item" data-section="advanced">
+              <div class="roadmap-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="roadmap-content">
+                <h4>高级技巧</h4>
+                <p>探索进阶功能和自定义</p>
+              </div>
+            </div>
+            <div class="roadmap-item" data-section="cases">
+              <div class="roadmap-icon"><i class="fas fa-flask"></i></div>
+              <div class="roadmap-content">
+                <h4>实战案例</h4>
+                <p>通过实例学习应用</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button next-button" data-next="basics">下一章：基础概念 <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </section>
+
+      <section id="basics" class="content-section">
+        <div class="section-header">
+          <h2><i class="fas fa-book"></i> 基础概念</h2>
+          <div class="difficulty-badge beginner">入门级</div>
+          <div class="time-estimate"><i class="far fa-clock"></i> 15分钟</div>
+        </div>
+        
+        <div class="content-card">
+          <h3>核心术语</h3>
+          <p>在开始使用Garak之前，了解以下核心术语将有助于你更好地理解框架：</p>
+          
+          <div class="terms-grid">
+            <div class="term-item">
+              <h4>攻击 (Attack)</h4>
+              <p>用于测试模型安全性的输入策略，如提示注入、越狱尝试等。</p>
+            </div>
+            <div class="term-item">
+              <h4>检测器 (Detector)</h4>
+              <p>分析模型响应并识别潜在问题的组件。</p>
+            </div>
+            <div class="term-item">
+              <h4>生成器 (Generator)</h4>
+              <p>创建测试用例的组件，可以是预定义的或动态生成的。</p>
+            </div>
+            <div class="term-item">
+              <h4>评估器 (Evaluator)</h4>
+              <p>对测试结果进行量化评分和分析的组件。</p>
+            </div>
+            <div class="term-item">
+              <h4>报告 (Report)</h4>
+              <p>汇总测试结果和安全评估的文档。</p>
+            </div>
+            <div class="term-item">
+              <h4>对抗样本 (Adversarial Examples)</h4>
+              <p>特别设计的输入，旨在欺骗或混淆模型，导致错误或有害输出。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-card interactive-card">
+          <h3>Garak的工作流程</h3>
+          <div class="workflow-diagram">
+            <div class="workflow-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>选择目标模型</h4>
+                <p>指定要测试的语言模型</p>
+              </div>
+            </div>
+            <div class="workflow-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="workflow-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>配置攻击方法</h4>
+                <p>选择一个或多个攻击策略</p>
+              </div>
+            </div>
+            <div class="workflow-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="workflow-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>执行测试</h4>
+                <p>运行测试并收集模型响应</p>
+              </div>
+            </div>
+            <div class="workflow-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="workflow-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>应用检测器</h4>
+                <p>分析响应中的潜在问题</p>
+              </div>
+            </div>
+            <div class="workflow-arrow"><i class="fas fa-arrow-down"></i></div>
+            <div class="workflow-step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h4>生成报告</h4>
+                <p>汇总结果并提供安全评估</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="interactive-note">
+            <p><i class="fas fa-lightbulb"></i> <strong>互动提示：</strong>尝试思考你可能需要测试的LLM应用，以及哪些安全风险最值得关注？</p>
+          </div>
+        </div>
+        
+        <div class="navigation-buttons">
+          <button class="nav-button prev-button" data-prev="intro"><i class="fas fa-arrow-left"></i> 上一章：简介</button>
+          <button class="nav-button next-button" data-next="installation">下一章：安装配置 <i class="fas fa-arrow-right"></i></button>
+        </div>
+        
+      </section>
+
+      <section id="installation" class="content-section">
+        <div class="section-header">
+          <h2><i class="fas fa-download"></i> 安装配置</h2>
+          <div class="difficulty-badge beginner">入门级</div>
+          <div class="time-estimate"><i class="far fa-clock"></i> 20分钟</div>
+        </div>
+        
+        <div class="content-card">
+          <h3>环境准备</h3>
+          <p>在安装Garak之前，请确保你的系统满足以下要求：</p>
+          <ul>
+            <li>Python 3.10或更高版本</li>
+            <li>pip包管理器</li>
+            <li>虚拟环境工具（推荐使用venv或conda）</li>
+          </ul>
+          
+          <div class="info-box">
+            <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+            <div class="info-content">
+              <p>强烈建议在虚拟环境中安装Garak，以避免与系统Python包发生冲突。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-card">
+          <h3>安装步骤</h3>
+          
+          <div class="workflow-diagram">
+            <div class="workflow-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>创建虚拟环境</h4>
+                <div class="code-block">
+                  <pre>python -m venv garak-env
+source garak-env/bin/activate  # Linux/Mac
+garak-env\Scripts\activate  # Windows</pre>
+                </div>
